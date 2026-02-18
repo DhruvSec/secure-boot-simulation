@@ -1,0 +1,3 @@
+Version:1.0
+EV Battery Management Firmware 
+Temperature monitoring active
