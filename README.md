@@ -1,8 +1,26 @@
-# Secure Boot Simulation (Automotive Cybersecurity)
+* Automotive ECU Secure Boot & Firmware Protection Simulation
 
-This project demonstrates secure boot concept used in automotive ECUs.
+ **Overview**
+This project simulates secure boot mechanism used in automotive ECUs to ensure firmware authenticity and prevent rollback attacks.
 
-Goals:
-- Simulate firmware signing
-- Verify authenticity before execution
-- Demonstrate firmware tamper detection
+ **Features**
+- Firmware signature verification using cryptography
+- Tamper detection
+- Rollback attack detection
+- Secure boot decision logic
+- Security event logging
+
+ **Technologies**
+- C programming
+- OpenSSL
+- Linux environment
+
+ **Project Structure**
+src/ - secure boot verification code  
+firmware/ - firmware and version files  
+keys/ - cryptographic keys  
+logs/ - security logs  
+docs/ - architecture diagrams  
+
+ **Use Case**
+Demonstrates how automotive ECUs ensure only trusted firmware runs in safety-critical systems such as EV battery management and powertrain controllers.
