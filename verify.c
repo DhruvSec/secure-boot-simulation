@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+void log_event(const char *message) {
+    FILE *log = fopen("security_log.txt", "a");
+    if (log != NULL) {
+        fprintf(log, "%s\n", message);
+        fclose(log);
+    }
+}
+
+
+
 int main() {
 
     printf("ECU Secure Boot Starting...\n");
@@ -21,6 +31,7 @@ int main() {
 
     if (!strstr(result, "Verified OK")) {
         printf("SECURITY ALERT: Firmware tampered. Boot blocked.\n");
+	log_event("Tampered firmware detected - boot blocked");
         return 0;
     }
 
@@ -39,9 +50,12 @@ int main() {
 
     if (strstr(fw_version, current_version)) {
         printf("Firmware authentic and version valid.\n");
-        printf("ECU BOOT SUCCESSFUL.\n");
+        printf("Vehicle ready to start safely.\n");
+	log_event("Secure boot successful");	
     } else {
         printf("WARNING: Firmware version mismatch! Possible rollback attack.\n");
+	log_event("firmware rollback detected - version mismatch");
+
         printf("Boot blocked.\n");
     }
 

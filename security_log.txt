@@ -1,0 +1,3 @@
+Secure boot successful
+Tampered firmware detected - boot blocked
+Secure boot successful
