@@ -1,0 +1,10 @@
+# Ignore private keys
+private.pem
+
+# Ignore executables
+verify
+*.out
+
+# Ignore temp files
+verify_output.txt
+*.log
