@@ -25,6 +25,10 @@ docs/ - architecture diagrams
 ## Use Case
 Demonstrates how automotive ECUs ensure only trusted firmware runs in safety-critical systems such as EV battery management and powertrain controllers.
 
+## Architecture
+![Secure Boot Architecture](docs/secure_boot_architecture.png)
+
+
 ## Security Note
 Private signing keys are not included in this repository to follow secure key management practices.  
 Only public verification keys are shared.
